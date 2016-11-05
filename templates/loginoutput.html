@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Google App Engine</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+</head>
+
+<body>
+    <h1>successful login</h1>
+
+    <h2>Upload an image </h2>
+    <form method="POST", action ="/uploadimage" enctype="multipart/form-data">
+        <!--<Image ID: <input type="text" name="id" />-->
+        <input type="file" name="pic" accept="image/*"><br>
+        Subject:
+        <input type="text" name="comments" maxlength="100">
+        <input type="Submit" value ="uploadimage" name ="Submit">
+        Select: <select name="priority">
+
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+        </select>
+    </form>
+
+
+
+    <h3>upload a text file</h3>
+    <form method="POST", action ="/uploadtext" enctype="multipart/form-data">
+        <input type="file" name="file"><br>
+        Subject:
+        <input type="text" name="comments" maxlength="100">
+        <input type="Submit" value ="uploadtext" name ="Submit">
+        Select: <select name="priority">
+
+        <option value="0">0</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+        <option value="7">7</option>
+        <option value="8">8</option>
+        <option value="9">9</option>
+        <option value="10">10</option>
+
+        </select>
+    </form>
+
+
+  <br> <br> <br><br>
+  <form action="/fetchmine" method="POST">
+<h2>View my Images:</h2>
+<input type="submit" name="Submit" value ="view">
+</form><br>
+  <br>
+<form action="/fetch" method="POST">
+<h2>View all Images:</h2>
+<input type="submit" name="Submit" value ="view">
+</form>
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>--Google App Engine--</title>
+<h1> Priyanka Sekhar 1001215254</h2>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="stylesheets/style.css" />
+</head>
+<body>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.tablesorter/2.26.5/js/jquery.tablesorter.min.js"></script>
+
+<script type="text/javascript">
+
+$(document).ready(function()
+    {
+        $("#priyankatable").tablesorter( {sortList: [[0,0], [1,0]]});
+    }
+);
+ </script>
+<table id="priyankatable" border="1" style ="...">
+<thead>
+<tr>
+    <th>Filename</th>
+    <th>File Type</th>
+    <th>Date</th>
+    <th>Priority</th>
+    <th>Subject</th>
+</tr>
+</thead>
+<tbody>
+{%for item in lists%}
+    <tr>
+    <td> {{item.file_name}}</td>
+       {% if item.file_type=="image" %}
+    <td><img src={{ item.image }} style="width=508px;height:328px;"></img><br></td>
+        {% else %}
+    <td>{{ item.image }}</td>
+        {% endif %}
+    <td>{{item.uploadDate}}</td>
+    <td>{{  item.priority }}</td>
+    <td>{{ item.com }}</td>
+    </tr>
+{% endfor %}
+</tbody>
+</table>
+<button onclick="goBack()">Go Back</button>
+<script>
+function goBack() {
+    window.history.back();
+}
+</script>
+
+
+</body>
+</html>
+
