@@ -1,6 +1,6 @@
 # microsoftazure-project
 
-Microsoft Azure and Scalability
+#Microsoft Azure and Scalability
 
 Create a web service that allows a user to login, and upload either: a textual note or a single picture (these may be a
 grocery list, a reminder, a todo list, a picture of a bag of rice, or similar – a quick note or picture).
@@ -17,7 +17,7 @@ Multiple users may use your service simultaneously.
 
 You may restrict picture sizes, note sizes, and limit number of pictures and notes, per user.
 
-Scaling a web service:
+#Scaling a web service:
 
 Make your web service automatically scale to support more, simultaneous, use.
 
